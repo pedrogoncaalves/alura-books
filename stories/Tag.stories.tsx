@@ -4,14 +4,14 @@ import { Tag, ITagProps } from '../src/components/Tag'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-    title: 'Componentes/AbTag',
+    title: 'Componentes/Tag',
     component: Tag
 } as ComponentMeta<typeof Tag>
 
-const Template: ComponentStory<typeof Tag> = (args) =>  {...args}/>
+const Template: ComponentStory<typeof Tag> = (args) => <Tag {...args}/>
 
 export const Primario = Template.bind({})
 
 Primario.args = {
-    text: 'Tag'
+    text: 'Android'
 } as ITagProps

@@ -12,7 +12,29 @@ export default {
 
 const Template: ComponentStory<typeof AbOptionsCard>= () => <AbOptionsCard/>
 
-export const Primary = Template.bind({});
+export const Padrao = Template.bind({});
 
-Primary.args = {} 
+Padrao.args = {
+    opcoes:[ {
+        id:1,
+        title: 'E-book',
+        body: 'R$ 0,00',
+        footer: '.pdf, .epub, .mob'
+    },
+     {
+        id:2,
+        title: 'Impresso',
+        body: 'R$ 0,00',
+        footer: '.pdf, .epub, .mob'
+    },
+     {
+        id:3,
+        title: 'Impresso + E-book',
+        corpo: 'R$ 0,00',
+        footer: '.pdf, .epub, .mob'
+    }
+]
+} 
+
+
 

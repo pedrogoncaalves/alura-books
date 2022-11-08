@@ -15,12 +15,17 @@ export interface IAbOptions {
 
 export interface IAbOptionsProps {
     options: IAbOptions[]
+    standardValue?: IAbOptions | null
+    onChange?: (option: IAbOptions) => void  
 }
 
-export const AbOptionsCard = ({ options }: IAbOptionsProps) => {
-    const [selection, setSelection] = useState<IAbOptions | null>(null)
+export const AbOptionsCard = ({ options, onChange, standardValue }: IAbOptionsProps) => {
+    const [selection, setSelection] = useState<IAbOptions | null>(standardValue ?? null)
     const toSelect = (option: IAbOptions) : void => {
         setSelection(option)
+        if (onChange) {
+            onChange(option)
+        }
     }
 
     return(<>
